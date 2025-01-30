@@ -1,7 +1,7 @@
 <template>
   <div class="review-header">
     <img :src="googleIcon" alt="Google icon" />
-    <div class="review-header--text">Відгуки наших клієнтів у Google</div>
+    <div class="review-header--text">{{$t('reviews.text')}}</div>
   </div>
 </template>
 

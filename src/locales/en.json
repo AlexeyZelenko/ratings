@@ -1,0 +1,14 @@
+{
+  "reviews": {
+    "noReviews": "Currently there are no vids",
+    "addReview": "Add a review",
+    "review": "Reviews",
+    "rating": "Rating",
+    "show": "Show",
+    "write": "Write",
+    "text": "Reviews of our clients on Google",
+    "few": "reviews",
+    "singular": "review",
+    "plural": "reviews"
+  }
+}

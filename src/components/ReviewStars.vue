@@ -15,6 +15,9 @@
 
 <script setup lang="ts">
 import { defineProps, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps<{
   score: number;
@@ -31,18 +34,18 @@ const formattedReviewCount = computed(() => {
   const lastTwoDigits = count % 100;
 
   if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
-    return `${count} відгуків`;
+    return `${count} ${t('reviews.plural')}`;
   }
 
   switch (lastDigit) {
     case 1:
-      return `${count} відгук`;
+      return `${count} ${t('reviews.singular')}`;
     case 2:
     case 3:
     case 4:
-      return `${count} відгуки`;
+      return `${count} ${t('reviews.few')}`;
     default:
-      return `${count} відгуків`;
+      return `${count} ${t('reviews.plural')}`;
   }
 });
 

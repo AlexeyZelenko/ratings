@@ -2,6 +2,7 @@
   <div v-if="isLoading">Loading...</div>
   <div v-else-if="error">Error loading ratings</div>
   <div v-else class="review">
+    <LanguageSwitcher />
     <div class="review-header">
       <ReviewCard>
         <div class="review-header--block">
@@ -16,10 +17,10 @@
 
     <ReviewCard>
       <div class="review-buttons">
-        <ReviewButton variant="show">Переглянути</ReviewButton>
+        <ReviewButton variant="show">{{$t('reviews.show')}}</ReviewButton>
 
         <ReviewButton variant="write">
-          <template #default>Написати</template>
+          <template #default>{{$t('reviews.write')}}</template>
           <template #modal-content>
             Тут буде форма для відгуку
           </template>
@@ -36,6 +37,7 @@ import ReviewCard from './ReviewCard.vue';
 import ReviewHeader from './ReviewHeader.vue';
 import ReviewStars from './ReviewStars.vue';
 import ReviewButton from './ReviewButton.vue';
+import LanguageSwitcher from './LanguageSwitcher.vue';
 
 const ratings = ref([]);
 const isLoading = ref(true);
