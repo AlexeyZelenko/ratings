@@ -34,8 +34,12 @@ vue-spa-task/
 ├── src/
 │   ├── assets/
 │   │   └── fonts
+│   ├── locales/
+│   │   └── en.json
+│   │   └── uk.json
 │   ├── components/
 │   │   └── GoogleReviews.vue
+│   │   └── LanguageSwitcher.vue
 │   │   └── ReviewButton.vue
 │   │   └── ReviewCard.vue
 │   │   └── ReviewHeader.vue
@@ -43,6 +47,7 @@ vue-spa-task/
 │   ├── views/
 │   │   └── HomeView.vue
 │   ├── App.vue
+│   ├── i18n.ts
 │   ├── main.ts
 │   ├── styles/
 │   │   └── main.scss
